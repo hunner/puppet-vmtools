@@ -10,7 +10,8 @@ OVFTOOL=${OVFTOOL:='/opt/vmware/ovftool/ovftool'}
 OVFOPS=${OVFOPS:='-dm=monolithicSparse'}
 OSVER=${OSVER:='5.5'}
 OSDIST=${OSDIST:='centos'}
-PUPPETVER=${PUPPETVER:='2.6.1'}
+PUPPETVER=${PUPPETVER:='pe-1.1'}
+VMDIST=${VMDIST:='vmware'}
 
 PATCH='--- CentOS-min.ovf       2010-08-27 12:11:48.000000000 -0700
 +++ CentOS-min-edit.ovf  2010-08-27 12:14:38.000000000 -0700
@@ -37,7 +38,7 @@ PATCH='--- CentOS-min.ovf       2010-08-27 12:11:48.000000000 -0700
 \ No newline at end of file
 +</Envelope>'
 
-${OVFTOOL} ${OVFOPS} ../${OSDIST}-${OSVER}-${PUPPETVER}/CentOS-min.vmx ${PWD}/CentOS-min.ovf
+${OVFTOOL} ${OVFOPS} ../${OSDIST}-${OSVER}-${PUPPETVER}-${VMDIST}/CentOS-min.vmx ${PWD}/CentOS-min.ovf
 
 OVFFILE=`ls ${PWD} | grep \.ovf$`
 MFFILE=`ls ${PWD} | grep \.mf$`
