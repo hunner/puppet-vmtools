@@ -96,7 +96,7 @@ class localpm {
   }
 
   pkgsync { "base_pkgs":
-    pkglist  => "perl-URI*\nsubversion*\nneon*\ngmp*\nhttpd*\nperl-DBI*\nlibart_lgpl*\napr*\nruby-rdoc*\nntp*\nbluez-libs*\nbluez-utils*\nperl-DBD-MySQL*\nruby-ri*\nruby-irb*\nscreen*\nemacs*\nvim*\nemacs-nox*\njava-1.6.0-openjdk*\nalsa-lib*\ngiflib*\njpackage-utils*\nlibXtst*\n",
+    pkglist  => "perl-URI*\nsubversion*\nneon*\ngmp*\nhttpd*\nperl-DBI*\nlibart_lgpl*\napr*\nruby-rdoc*\nntp*\nbluez-libs*\nbluez-utils*\nperl-DBD-MySQL*\nruby-ri*\nruby-irb*\nscreen*\nemacs*\nvim*\nemacs-nox*\njava-1.6.0-openjdk*\nalsa-lib*\ngiflib*\njpackage-utils*\nlibXtst*\nopenssh*\nopenssh-clients*\nopenssh-server*\n",
     repopath => "${base}/mirror/centos/5/os/i386",
     source   => "::centos/5/os/i386/CentOS/",
     notify   => Repobuild["base_local"]
